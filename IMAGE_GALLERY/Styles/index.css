@@ -101,15 +101,14 @@ body {
 .sidebar {
     width: 350px;
     background: white;
-    padding: 20px;
+    padding: 10px;
     position: absolute;
-    top: 220px;
+    top: 230px;
     left: 1004px;
-    height: calc(100vh - 80px);
-    margin: 20px 0;
+    height:100%;
+    margin: 30px 0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
 }
 
 .sidebar-section {
@@ -126,10 +125,10 @@ body {
 .ad-space {
     background: #f8f8f8;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     border-radius: 4px;
     text-align: center;
-    min-height: 250px;
+    min-height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
