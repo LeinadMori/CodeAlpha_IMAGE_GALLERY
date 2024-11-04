@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Existing styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +10,18 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Header */
+/* Add container layout */
+.container {
+    display: flex;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.main-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
 .header {
     background-color: #1a1a1a;
     color: white;
@@ -18,7 +29,6 @@ body {
     padding: 2rem;
 }
 
-/* Navigation */
 .navigation {
     background-color: #333;
     padding: 1rem;
@@ -52,7 +62,6 @@ body {
     background-color: #357a38;
 }
 
-/* Gallery Section */
 .gallery-section {
     padding: 2rem;
     display: none;
@@ -62,7 +71,6 @@ body {
     display: block;
 }
 
-/* Gallery Grid */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -70,7 +78,6 @@ body {
     margin-top: 1rem;
 }
 
-/* Gallery Item */
 .gallery-item {
     position: relative;
     overflow: hidden;
@@ -90,7 +97,87 @@ body {
     object-fit: cover;
 }
 
-/* Modal */
+/* Sidebar styles */
+.sidebar {
+    width: 350px;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    top: 220px;
+    left: 1004px;
+    height: calc(100vh - 80px);
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.sidebar-section {
+    margin-bottom: 30px;
+}
+
+.sidebar-section h3 {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4CAF50;
+    color: #333;
+}
+
+.ad-space {
+    background: #f8f8f8;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    text-align: center;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #ddd;
+}
+
+.social-feed {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.social-feed-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
+.social-feed-item:last-child {
+    border-bottom: none;
+}
+
+.social-icon {
+    color: #1DA1F2;
+    font-size: 1.2rem;
+}
+
+.social-content {
+    flex: 1;
+}
+
+.social-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.social-meta {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -123,7 +210,52 @@ body {
     cursor: pointer;
 }
 
-/* Responsive Adjustments */
+/* Footer styles */
+.footer {
+    background-color: #0b0118;
+    padding: 20px;
+    text-align: center;
+    color: #3aa89f;
+    font-size: 0.9em;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border-radius: 8px 8px 0 0;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #0056b3;
+}
+
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: auto;
+        margin: 20px;
+        height: auto;
+        position: static;
+    }
+
+    .main-content {
+        margin-right: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .gallery-grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -137,5 +269,10 @@ body {
     .nav-button {
         width: 100%;
         max-width: 200px;
+    }
+
+    .sidebar {
+        margin: 10px;
+        padding: 15px;
     }
 }
