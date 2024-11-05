@@ -29,6 +29,8 @@ body {
     padding: 2rem;
 }
 
+
+
 .navigation {
     background-color: #333;
     padding: 1rem;
@@ -61,6 +63,7 @@ body {
 .nav-button.active {
     background-color: #357a38;
 }
+
 
 .gallery-section {
     padding: 2rem;
@@ -218,7 +221,7 @@ body {
     font-size: 0.9em;
     border-top: 1px solid #e0e0e0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 8px 8px 0 0;
 }
 
